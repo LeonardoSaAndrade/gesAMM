@@ -23,5 +23,12 @@ namespace gesAMM
             newFrm.MdiParent = this;
             newFrm.Show();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Globale.cnx = new System.Data.SqlClient.SqlConnection();
+            Globale.cnx.ConnectionString = "Data Source=BTS2020-29\\SQLEXPRESS;Initial Catalog=GSB_gesAMM;Integrated Security=True;MultipleActiveResultSets=True";
+            Globale.cnx.Open();
+        }
     }
 }

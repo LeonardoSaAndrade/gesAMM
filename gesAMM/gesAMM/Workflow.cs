@@ -9,7 +9,7 @@ namespace gesAMM
     class Workflow
     {
         private DateTime dateDecision;
-        //Etape
-        //Decision
+        //Collection Etape
+        //Collection Decision
     }
 }

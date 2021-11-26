@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace gesAMM
 {
-    public partial class Form1 : Form
+    public partial class frmMajEtape : Form
     {
-        public Form1()
+        public frmMajEtape()
         {
             InitializeComponent();
-        }
-
-        private void miseÀJourToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmMajEtape newFrm = new frmMajEtape();
-            newFrm.MdiParent = this;
-            newFrm.Show();
         }
     }
 }

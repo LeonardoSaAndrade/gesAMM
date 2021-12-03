@@ -37,7 +37,7 @@ namespace gesAMM
         public string getContreIndications() { return this.contreIndications; }
         public string getAmm() { return this.amm; }
         public int getDerniereEtape() { return this.derniereEtape; }
-        public List<Famille> getFamille() { return this.famille; }
+        public string getFamille() { return this.codefamille; }
 
     }
 }

@@ -38,3 +38,4 @@ namespace gesAMM
         public string getAmm() { return this.amm; }
         public int getDerniereEtape() { return this.derniereEtape; }
         public List<Famille> getFamille() { return this.famille; }
+    }

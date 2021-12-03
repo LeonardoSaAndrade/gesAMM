@@ -19,13 +19,13 @@ namespace gesAMM
 
         private void SaisieDecisionEtape_Load(object sender, EventArgs e)
         {
-            foreach(Medicament medicament in Globale )
-            cbMedicament.Items.Add()
+            foreach (Medicament medicament in Globale.medicament.Values)
+                cbMedicament.Items.Add(medicament.getNomCommercial());
         }
 
         private void btValiderMedicament_Click(object sender, EventArgs e)
         {
-            int derniereEtape = cbMedicament
+            
         }
     }
 }

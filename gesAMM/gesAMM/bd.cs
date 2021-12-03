@@ -69,6 +69,8 @@ namespace gesAMM
                 string medAmm = resultat["MED_AMM"].ToString();
                 int etape = (int)resultat["ETP_NUM"];
 
+                new Medicament(codeMed,nomComMed,medCompo,medEffet,medContreInd,medAmm,etape,famCode);
+
             }
             Connexion.Close();
         }

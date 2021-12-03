@@ -15,10 +15,10 @@ namespace gesAMM
         private string contreIndications;
         private string amm;
         private int derniereEtape;
-        private List<Famille> famille;
+        private string codefamille;
         //famille
 
-        public Medicament(string depotLegal, string nomCommercial, string composition, string effets, string contreIndications, string amm, int derniereEtape, List<Famille> famille)
+        public Medicament(string depotLegal, string nomCommercial, string composition, string effets, string contreIndications, string amm, int derniereEtape, string codefamille)
         {
             this.depotLegal = depotLegal;
             this.nomCommercial = nomCommercial;
@@ -27,7 +27,7 @@ namespace gesAMM
             this.contreIndications = contreIndications;
             this.amm = amm;
             this.derniereEtape = derniereEtape;
-            this.famille = famille;
+            this.codefamille = codefamille;
         }
 
         public string getDepotLegal() { return this.depotLegal; }

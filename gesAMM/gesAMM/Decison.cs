@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace gesAMM
 {
-    class Decison
+    class Decision
     {
         private int id;
         private string libelle;
 
-        public void Decision(int id, string libelle)
+        public void decision(int id, string libelle)
         {
             this.id = id;
             this.libelle = libelle;

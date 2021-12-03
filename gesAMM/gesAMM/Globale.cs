@@ -9,9 +9,10 @@ namespace gesAMM
 {
     class Globale
     {
-        Dictionary<int, Famille> famille = new Dictionary<int, Famille>();
-        Dictionary<string, Medicament> medicament = new Dictionary<string, Medicament>();
+        public static Dictionary<int, Famille> famille ;
+        public static Dictionary<string, Medicament> medicament ;
+        public static List<Etape> etape ;
+        public static List<Decision> decision ;  
         public static SqlConnection cnx;
-
     }
 }

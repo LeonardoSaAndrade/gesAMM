@@ -8,17 +8,20 @@ namespace gesAMM
 {
     class EtapeNormee : Etape
     {
-        private string norme;
+        private string Norme;
         private DateTime dateNorme;
 
-        public EtapeNormee(int num, string libelle, string norme, DateTime dateNorme) : base(num,libelle)
+
+        public EtapeNormee(int num, string libelle,string norme, DateTime dateNorme) : base(num,libelle)
         {
-            this.norme = norme;
             this.dateNorme = dateNorme;
+            this.Norme = norme;
+            Globale.lesEtapesNormee.Add(this);
         }
 
-        public string getNorme() { return this.norme; }
+
         public DateTime getDateNorme() { return this.dateNorme; }
+        public string getNorme() { return this.Norme; }
 
     }
 }

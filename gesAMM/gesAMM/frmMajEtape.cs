@@ -16,5 +16,19 @@ namespace gesAMM
         {
             InitializeComponent();
         }
+
+        private void frmMajEtape_Load(object sender, EventArgs e)
+        {
+            foreach(EtapeNormee uneEtapeNormee in Globale.lesEtapesNormee)
+            {
+                ListViewItem ligne = new ListViewItem();
+
+                ligne.Text = uneEtapeNormee.getNum().ToString();
+                ligne.SubItems.Add(uneEtapeNormee.getNorme());
+                ligne.SubItems.Add(uneEtapeNormee.getDateNorme().ToString().Substring(0,10));
+
+                lvEtapeNormee.Items.Add(ligne);
+            }
+        }
     }
 }

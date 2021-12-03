@@ -11,6 +11,8 @@ namespace gesAMM
     {
         Dictionary<int, Famille> famille = new Dictionary<int, Famille>();
         Dictionary<string, Medicament> medicament = new Dictionary<string, Medicament>();
+        public static List<Etape> lesEtapes = new List<Etape>();
+        public static List<EtapeNormee> lesEtapesNormee = new List<EtapeNormee>();
         public static SqlConnection cnx;
 
     }

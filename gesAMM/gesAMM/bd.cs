@@ -50,5 +50,29 @@ namespace gesAMM
             }
             Connexion.Close();
         }
+
+        public static void lireLesMedicaments()
+        {
+            Connexion.Open();
+            SqlCommand commande = new SqlCommand("prc_listMedicament", Connexion);
+            commande.CommandType = CommandType.StoredProcedure;
+            SqlDataReader resultat = commande.ExecuteReader();
+
+            while (resultat.Read())
+            {
+                string codeMed = resultat["MED_DEPOTLEGAL"].ToString();
+                string nomComMed = resultat["MED_NOMCOMMERCIAL"].ToString();
+                string famCode = resultat["FAM_CODE"].ToString();
+                string medCompo = resultat["MED_COMPOSITION"].ToString();
+                string medEffet = resultat["MED_EFFETS"].ToString();
+                string medContreInd = resultat["MED_CONTREINDIC"].ToString();
+                string medAmm = resultat["MED_AMM"].ToString();
+                int etape = (int)resultat["ETP_NUM"];
+
+            }
+            Connexion.Close();
+        }
+
+
     }
 }

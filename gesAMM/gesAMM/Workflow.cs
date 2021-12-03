@@ -9,7 +9,14 @@ namespace gesAMM
     class Workflow
     {
         private DateTime dateDecision;
-        //Collection Etape
-        //Collection Decision
+        private List<Etape> etape;
+        private List<Decision> decision;
+
+        public void workflow(DateTime dateDecision, List<Etape> etape, List<Decision> decision)
+        {
+            this.dateDecision = dateDecision;
+            this.etape = etape;
+            this.decision = decision;
+        }
     }
 }

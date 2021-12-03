@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace gesAMM
 {
-    class Decison
+    class Decision
     {
         private int id;
         private string libelle;

@@ -18,7 +18,7 @@ namespace gesAMM
 
             //objet SQLCommand pour définir la procédure stockée à utiliser
             Connexion.Open();
-            SqlCommand commande = new SqlCommand("prc_listeEtapeNormee", Connexion);
+            SqlCommand commande = new SqlCommand("prc_listEtapeNormee", Connexion);
             commande.CommandType = CommandType.StoredProcedure;
             SqlDataReader resultat = commande.ExecuteReader();
 

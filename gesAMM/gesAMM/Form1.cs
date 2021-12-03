@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using static gesAMM.bd;
 
 namespace gesAMM
 {
@@ -26,9 +20,7 @@ namespace gesAMM
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Globale.cnx = new System.Data.SqlClient.SqlConnection();
-            Globale.cnx.ConnectionString = "Data Source=BTS2020-29\\SQLEXPRESS;Initial Catalog=GSB_gesAMM;Integrated Security=True;MultipleActiveResultSets=True";
-            Globale.cnx.Open();
+            lireLesEtapesNormes();
         }
     }
 }

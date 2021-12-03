@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="bd.cs" />
     <Compile Include="Decison.cs" />
     <Compile Include="Etape.cs" />
     <Compile Include="EtapeNormee.cs" />
@@ -69,6 +70,9 @@
     <Compile Include="Workflow.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMajEtape.resx">
+      <DependentUpon>frmMajEtape.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

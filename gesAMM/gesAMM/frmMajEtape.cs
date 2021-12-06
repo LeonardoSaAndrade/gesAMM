@@ -29,6 +29,14 @@ namespace gesAMM
 
                 lvEtapeNormee.Items.Add(ligne);
             }
+
+            btUpdate.Enabled = false;
+        }
+
+        private void lvEtapeNormee_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            btUpdate.Enabled = true;
+            tbMajNorme.Text = lvEtapeNormee.SelectedItems.ToString();
         }
     }
 }

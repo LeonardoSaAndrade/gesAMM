@@ -23,5 +23,9 @@ namespace gesAMM
         public DateTime getDateNorme() { return this.dateNorme; }
         public string getNorme() { return this.Norme; }
 
+        public void setDateNorme(DateTime ladate) { this.dateNorme = ladate; }
+
+        public void setNorme(string lanorme) { this.Norme = lanorme; }
+
     }
 }

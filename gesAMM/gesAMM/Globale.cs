@@ -14,6 +14,7 @@ namespace gesAMM
         public static List<Etape> lesEtapes = new List<Etape>();
         public static List<EtapeNormee> lesEtapesNormee = new List<EtapeNormee>();
         public static SqlConnection cnx;
+        public static List<Famille> lesFamilles = new List<Famille>();
 
     }
 }

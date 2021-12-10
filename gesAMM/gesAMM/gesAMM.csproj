@@ -57,6 +57,18 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAjoutMed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAjoutMed.Designer.cs">
+      <DependentUpon>frmAjoutMed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsultMed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultMed.Designer.cs">
+      <DependentUpon>frmConsultMed.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMajEtape.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +82,12 @@
     <Compile Include="Workflow.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAjoutMed.resx">
+      <DependentUpon>frmAjoutMed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsultMed.resx">
+      <DependentUpon>frmConsultMed.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMajEtape.resx">
       <DependentUpon>frmMajEtape.cs</DependentUpon>

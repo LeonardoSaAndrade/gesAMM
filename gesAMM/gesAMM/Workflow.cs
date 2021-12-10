@@ -6,17 +6,26 @@ using System.Threading.Tasks;
 
 namespace gesAMM
 {
-    class Workflow
+    public class Workflow
     {
-        private DateTime dateDecision;
-        private List<Etape> etape;
-        private List<Decision> decision;
+        public static List<Workflow> lesWorkflow = new List<Workflow>();
 
-        public void workflow(DateTime dateDecision, List<Etape> etape, List<Decision> decision)
+        private string depotLegaleWorkflow;
+        private DateTime dateDecisionWorkflow;
+        private int numEtapeWorkflow;
+        private int idDecisionWorkflow;
+
+        public Workflow(string depotLegaleWorkflow, DateTime dateDecision, int etape, int decision)
         {
-            this.dateDecision = dateDecision;
-            this.etape = etape;
-            this.decision = decision;
+            this.depotLegaleWorkflow = depotLegaleWorkflow;
+            this.dateDecisionWorkflow = dateDecision;
+            this.numEtapeWorkflow = etape;
+            this.idDecisionWorkflow = decision;
         }
+
+        public string getDepotLegaleWorkflow() { return this.depotLegaleWorkflow; }
+        public DateTime getDateDecisionWorkflow() { return this.dateDecisionWorkflow; }
+        public int getNumEtapeWorkflow() { return this.numEtapeWorkflow; }
+        public int getIdDecisionWorkfow() { return this.idDecisionWorkflow; }
     }
 }

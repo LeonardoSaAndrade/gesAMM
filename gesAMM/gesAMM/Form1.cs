@@ -26,9 +26,18 @@ namespace gesAMM
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Globale.cnx = new System.Data.SqlClient.SqlConnection();
-            Globale.cnx.ConnectionString = "Data Source=BTS2020-29\\SQLEXPRESS;Initial Catalog=GSB_gesAMM;Integrated Security=True;MultipleActiveResultSets=True";
-            Globale.cnx.Open();
+            //Globale.cnx = new System.Data.SqlClient.SqlConnection();
+            //Globale.cnx.ConnectionString = @"Data Source=BTS2020-24\SQLEXPRESS;Initial Catalog=GSB_gesAMM;Integrated Security=True;MultipleActiveResultSets=True";
+            //Globale.cnx.Open();
+
+            BD.recupMecicaments();
+        }
+
+        private void consultationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ConsultationWorkflowEtapesMedicament newFrm = new ConsultationWorkflowEtapesMedicament();
+            newFrm.MdiParent = this;
+            newFrm.Show();
         }
     }
 }

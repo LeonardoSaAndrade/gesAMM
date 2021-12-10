@@ -10,6 +10,7 @@ namespace gesAMM
     {
         private string norme;
         private DateTime dateNorme;
+        private int index;
 
         public EtapeNormee(int num, string libelle, string norme, DateTime dateNorme) : base(num,libelle)
         {
@@ -19,6 +20,7 @@ namespace gesAMM
 
         public string getNorme() { return this.norme; }
         public DateTime getDateNorme() { return this.dateNorme; }
+        public int getIndex() { return this.index; }
 
     }
 }

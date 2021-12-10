@@ -25,6 +25,7 @@ namespace gesAMM
 
         private void btValiderMedicament_Click(object sender, EventArgs e)
         {
+           // foreach( Globale.medicament[cbMedicament.SelectedIndex]. )
             
         }
     }

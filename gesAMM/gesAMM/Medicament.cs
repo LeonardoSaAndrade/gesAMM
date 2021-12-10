@@ -6,25 +6,24 @@ using System.Threading.Tasks;
 
 namespace gesAMM
 {
-    class Medicament
+    public class Medicament
     {
         private string depotLegal;
         private string nomCommercial;
         private string composition;
         private string effets;
         private string contreIndications;
-        private string amm;
         private int derniereEtape;
         private string codeFamille;
+        List<Workflow> lesEtapes;
 
-        public Medicament(string depotLegal, string nomCommercial, string composition, string effets, string contreIndications, string amm, int derniereEtape, string codeFamille)
+        public Medicament(string depotLegal, string nomCommercial, string composition, string effets, string contreIndications, int derniereEtape, string codeFamille)
         {
             this.depotLegal = depotLegal;
             this.nomCommercial = nomCommercial;
             this.composition = composition;
             this.effets = effets;
             this.contreIndications = contreIndications;
-            this.amm = amm;
             this.derniereEtape = derniereEtape;
             this.codeFamille = codeFamille;
         }
@@ -34,7 +33,10 @@ namespace gesAMM
         public string getComposition() { return this.composition; }
         public string getEffets() { return this.effets; }
         public string getContreIndications() { return this.contreIndications; }
-        public string getAmm() { return this.amm; }
         public int getDerniereEtape() { return this.derniereEtape; }
         public string getCodeFamille() { return this.codeFamille; }
+        public List<Workflow> GetLesEtapes() { return this.lesEtapes; }
+
+        public void setLesEtapes(List<Workflow> workflows) { this.lesEtapes = workflows; }
     }
+}

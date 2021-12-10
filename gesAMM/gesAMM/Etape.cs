@@ -6,19 +6,21 @@ using System.Threading.Tasks;
 
 namespace gesAMM
 {
-    class Etape
+    public class Etape
     {
-        private int num;
-        private string libelle;
-
+        public static List<Etape> lesEtapes = new List<Etape>();
+        private List<EtapeNormee> lesEtapesNormees;
+        private int numEtape;
+        private string libelleEtape;
 
         public Etape(int num, string libelle)
         {
-            this.num = num;
-            this.libelle = libelle;
+            this.numEtape = num;
+            this.libelleEtape = libelle;
+            this.lesEtapesNormees = new List<EtapeNormee>();
         }
 
-        public int getNum() { return this.num; }
-        public string getLibelle() { return this.libelle; }
+        public int getNumEtape() { return this.numEtape; }
+        public string getLibelleEtape() { return this.libelleEtape; }
     }
 }

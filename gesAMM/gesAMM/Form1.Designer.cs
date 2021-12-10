@@ -31,6 +31,9 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.etapeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.miseÀJourToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.medicamentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ajoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -38,7 +41,8 @@
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.etapeToolStripMenuItem});
+            this.etapeToolStripMenuItem,
+            this.medicamentToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 28);
@@ -59,6 +63,29 @@
             this.miseÀJourToolStripMenuItem.Size = new System.Drawing.Size(165, 26);
             this.miseÀJourToolStripMenuItem.Text = "Mise à jour";
             this.miseÀJourToolStripMenuItem.Click += new System.EventHandler(this.miseÀJourToolStripMenuItem_Click);
+            // 
+            // medicamentToolStripMenuItem
+            // 
+            this.medicamentToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ajoutToolStripMenuItem,
+            this.consultationToolStripMenuItem});
+            this.medicamentToolStripMenuItem.Name = "medicamentToolStripMenuItem";
+            this.medicamentToolStripMenuItem.Size = new System.Drawing.Size(106, 24);
+            this.medicamentToolStripMenuItem.Text = "Medicament";
+            // 
+            // ajoutToolStripMenuItem
+            // 
+            this.ajoutToolStripMenuItem.Name = "ajoutToolStripMenuItem";
+            this.ajoutToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.ajoutToolStripMenuItem.Text = "Ajout";
+            this.ajoutToolStripMenuItem.Click += new System.EventHandler(this.ajoutToolStripMenuItem_Click);
+            // 
+            // consultationToolStripMenuItem
+            // 
+            this.consultationToolStripMenuItem.Name = "consultationToolStripMenuItem";
+            this.consultationToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.consultationToolStripMenuItem.Text = "Consultation";
+            this.consultationToolStripMenuItem.Click += new System.EventHandler(this.consultationToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -83,6 +110,9 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem etapeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem miseÀJourToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem medicamentToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ajoutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consultationToolStripMenuItem;
     }
 }
 

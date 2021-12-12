@@ -75,6 +75,40 @@ namespace gesAMM
             Connexion.Close();
         }
 
+        public static bool UpdateEtapeNorme(int id,string norme, DateTime date)
+        {
+            Connexion.Open();
+            SqlCommand maRequete = new SqlCommand("prc_update_etape_normee", Connexion);
+            // Il s’agit d’une procédure stockée:
+            maRequete.CommandType = System.Data.CommandType.StoredProcedure;
+
+            // Ajouter les parameters à la procédure stockée
+            SqlParameter paramIdETP = new SqlParameter("@etp_num", SqlDbType.Int, 5);
+            paramIdETP.Value = id;
+            SqlParameter paramNomNorme = new SqlParameter("@etp_norme", SqlDbType.Char, 30);
+            paramNomNorme.Value = norme;
+            SqlParameter paramDateNorme = new SqlParameter("@etp_date", SqlDbType.DateTime, 30);
+            paramDateNorme.Value = date.Date;
+            maRequete.Parameters.Add(paramIdETP);
+            maRequete.Parameters.Add(paramNomNorme);
+            maRequete.Parameters.Add(paramDateNorme);
+
+            // exécuter la procedure stockée
+            try
+            {
+                maRequete.ExecuteNonQuery();
+                Connexion.Close();
+                return true;
+            }
+            catch
+            {
+                Connexion.Close();
+                return false;
+            }
+        }
+
+        
+
 
     }
 }

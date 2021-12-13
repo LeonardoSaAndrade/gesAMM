@@ -36,5 +36,19 @@ namespace gesAMM
         {
             chargerListeMed();
         }
+
+        private void lvWorkflow_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            foreach (EtapeNormee uneEtapeNormee in Globale.lesEtapesNormee)
+            {
+                ListViewItem ligne = new ListViewItem();
+
+                ligne.Text = uneEtapeNormee.getNum().ToString();
+                ligne.SubItems.Add(uneEtapeNormee.getNorme());
+                ligne.SubItems.Add(uneEtapeNormee.getDateNorme().ToString().Substring(0, 10));
+
+                lvWorkflow.Items.Add(ligne);
+            }
+        }
     }
 }

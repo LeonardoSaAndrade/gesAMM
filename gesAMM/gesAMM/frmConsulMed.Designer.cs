@@ -82,6 +82,7 @@ namespace gesAMM
             this.lvWorkflow.TabIndex = 1;
             this.lvWorkflow.UseCompatibleStateImageBehavior = false;
             this.lvWorkflow.View = System.Windows.Forms.View.Details;
+            this.lvWorkflow.SelectedIndexChanged += new System.EventHandler(this.lvWorkflow_SelectedIndexChanged);
             // 
             // columnHeader3
             // 

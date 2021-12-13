@@ -116,11 +116,12 @@ namespace gesAMM
                 {
                     int idx = lvEtapeNormee.SelectedIndices[0];
                     int id = int.Parse(lvEtapeNormee.Items[idx].SubItems[0].Text);
-                    if (bd.UpdateEtapeNorme(id,tbMajNorme.Text,DateTime.Parse(tbMajDate.Text)))
+                    if (bd.ModifierEtapeNorme(id,tbMajNorme.Text,DateTime.Parse(tbMajDate.Text)))
                     {
                         MessageBox.Show("L'étape a bien été mise à jour");
                         lvEtapeNormee.Items.Clear();
                         chargerListe();
+                        chargerHistorique();
 
                     }
                     else

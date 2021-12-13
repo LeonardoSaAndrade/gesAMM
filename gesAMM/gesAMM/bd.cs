@@ -75,39 +75,64 @@ namespace gesAMM
             Connexion.Close();
         }
 
-        public static bool UpdateEtapeNorme(int id,string norme, DateTime date)
+        public static bool ModifierEtapeNorme(int etp_num, string etp_norme, DateTime etp_date)
         {
             Connexion.Open();
+
+
+
             SqlCommand maRequete = new SqlCommand("prc_update_etape_normee", Connexion);
             // Il s’agit d’une procédure stockée:
-            maRequete.CommandType = System.Data.CommandType.StoredProcedure;
+            maRequete.CommandType = CommandType.StoredProcedure;
+
+
 
             // Ajouter les parameters à la procédure stockée
-            SqlParameter paramIdETP = new SqlParameter("@etp_num", SqlDbType.Int, 5);
-            paramIdETP.Value = id;
-            SqlParameter paramNomNorme = new SqlParameter("@etp_norme", SqlDbType.Char, 30);
-            paramNomNorme.Value = norme;
-            SqlParameter paramDateNorme = new SqlParameter("@etp_date", SqlDbType.DateTime, 30);
-            paramDateNorme.Value = date.Date;
-            maRequete.Parameters.Add(paramIdETP);
-            maRequete.Parameters.Add(paramNomNorme);
-            maRequete.Parameters.Add(paramDateNorme);
-
+            SqlParameter paramEtpNum = new SqlParameter("@etp_num", SqlDbType.Int, 5);
+            paramEtpNum.Value = etp_num;
+            SqlParameter paramEtpNorme = new SqlParameter("@etp_norme", SqlDbType.Char, 30);
+            paramEtpNorme.Value = etp_norme;
+            SqlParameter paramEtpDate = new SqlParameter("@etp_date", SqlDbType.Date, 30);
+            paramEtpDate.Value = etp_date;
+            maRequete.Parameters.Add(paramEtpNum);
+            maRequete.Parameters.Add(paramEtpNorme);
+            maRequete.Parameters.Add(paramEtpDate);
             // exécuter la procedure stockée
-            try
+
+
+
+            maRequete.ExecuteNonQuery();
+
+
+
+            SqlCommand commande = new SqlCommand("prc_listEtapeNormee", Connexion);
+            commande.CommandType = CommandType.StoredProcedure;
+            SqlDataReader resultat = commande.ExecuteReader();
+            Globale.lesEtapes.Clear();
+            Globale.lesEtapesNormee.Clear();
+            while (resultat.Read())
             {
-                maRequete.ExecuteNonQuery();
-                Connexion.Close();
-                return true;
+                int numEtapeNormee = (int)resultat["ETP_NUM"];
+                string EtapeLibelle = resultat["ETP_LIBELLE"].ToString();
+                string EtapeNormeLibelle = resultat["ETP_NORME"].ToString();
+                DateTime EtapeDateNorme = (DateTime)resultat["ETP_DATE_NORME"];
+
+
+
+                new EtapeNormee(numEtapeNormee, EtapeLibelle, EtapeNormeLibelle, EtapeDateNorme);
             }
-            catch
-            {
-                Connexion.Close();
-                return false;
-            }
+
+
+
+            Connexion.Close();
+
+
+
+            return true;
         }
 
-        
+
+
 
 
     }

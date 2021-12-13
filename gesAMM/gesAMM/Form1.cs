@@ -25,5 +25,12 @@ namespace gesAMM
             lireLesEtape();
             
         }
+
+        private void consultationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmConsulMed newFrm = new frmConsulMed();
+            newFrm.MdiParent = this;
+            newFrm.Show();
+        }
     }
 }

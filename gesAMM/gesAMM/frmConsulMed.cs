@@ -16,5 +16,25 @@ namespace gesAMM
         {
             InitializeComponent();
         }
+
+        private void chargerListeMed()
+        {
+            foreach (string code in Globale.medicament.Keys)
+            {
+                ListViewItem ligne = new ListViewItem();
+
+                Medicament unMedicament = Globale.medicament[code];
+
+                ligne.Text = unMedicament.getDepotLegal();
+                ligne.SubItems.Add(unMedicament.getNomCommercial());
+
+                lvMed.Items.Add(ligne);
+            }
+        }
+
+        private void frmConsulMed_Load(object sender, EventArgs e)
+        {
+            chargerListeMed();
+        }
     }
 }

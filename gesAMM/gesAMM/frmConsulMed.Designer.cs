@@ -30,9 +30,9 @@ namespace gesAMM
         private void InitializeComponent()
         {
             this.lvMed = new System.Windows.Forms.ListView();
-            this.lvWorkflow = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.lvWorkflow = new System.Windows.Forms.ListView();
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -47,12 +47,23 @@ namespace gesAMM
             this.columnHeader1,
             this.columnHeader2});
             this.lvMed.HideSelection = false;
-            this.lvMed.Location = new System.Drawing.Point(51, 85);
+            this.lvMed.Location = new System.Drawing.Point(45, 68);
+            this.lvMed.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lvMed.Name = "lvMed";
-            this.lvMed.Size = new System.Drawing.Size(476, 349);
+            this.lvMed.Size = new System.Drawing.Size(424, 280);
             this.lvMed.TabIndex = 0;
             this.lvMed.UseCompatibleStateImageBehavior = false;
             this.lvMed.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Depot Légal";
+            this.columnHeader1.Width = 138;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Nom commercial";
+            this.columnHeader2.Width = 158;
             // 
             // lvWorkflow
             // 
@@ -64,22 +75,13 @@ namespace gesAMM
             this.columnHeader7,
             this.columnHeader8});
             this.lvWorkflow.HideSelection = false;
-            this.lvWorkflow.Location = new System.Drawing.Point(616, 87);
+            this.lvWorkflow.Location = new System.Drawing.Point(510, 70);
+            this.lvWorkflow.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lvWorkflow.Name = "lvWorkflow";
-            this.lvWorkflow.Size = new System.Drawing.Size(541, 346);
+            this.lvWorkflow.Size = new System.Drawing.Size(481, 278);
             this.lvWorkflow.TabIndex = 1;
             this.lvWorkflow.UseCompatibleStateImageBehavior = false;
             this.lvWorkflow.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Depot Légal";
-            this.columnHeader1.Width = 138;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Nom commercial";
-            this.columnHeader2.Width = 158;
             // 
             // columnHeader3
             // 
@@ -112,13 +114,15 @@ namespace gesAMM
             // 
             // frmConsulMed
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1169, 535);
+            this.ClientSize = new System.Drawing.Size(1039, 428);
             this.Controls.Add(this.lvWorkflow);
             this.Controls.Add(this.lvMed);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmConsulMed";
             this.Text = "frmConsulMed";
+            this.Load += new System.EventHandler(this.frmConsulMed_Load);
             this.ResumeLayout(false);
 
         }

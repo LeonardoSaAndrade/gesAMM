@@ -54,6 +54,7 @@ namespace gesAMM
             this.lvMed.TabIndex = 0;
             this.lvMed.UseCompatibleStateImageBehavior = false;
             this.lvMed.View = System.Windows.Forms.View.Details;
+            this.lvMed.SelectedIndexChanged += new System.EventHandler(this.lvMed_SelectedIndexChanged);
             // 
             // columnHeader1
             // 

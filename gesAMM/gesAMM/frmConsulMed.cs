@@ -52,14 +52,20 @@ namespace gesAMM
 
 
             }
+            bd.Connexion.Close();
         }
 
         private void lvWorkflow_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void lvMed_SelectedIndexChanged(object sender, EventArgs e)
+        {
             bd.Connexion.Open();
             lvWorkflow.Items.Clear();
             //objet SQLCommand pour définir la procédure stockée à utiliser
-            SqlCommand maRequete = new SqlCommand("prc_ListEtapes", bd.Connexion);
+            SqlCommand maRequete = new SqlCommand("prc_ListWorkflow", bd.Connexion);
             SqlDataReader allData = maRequete.ExecuteReader();
 
 
@@ -68,8 +74,8 @@ namespace gesAMM
             while (allData.Read())
             {
                 DateTime dateDecision = DateTime.Parse(allData.GetValue(0).ToString());
-                int numEtape = int.Parse(allData.GetValue(1).ToString());
-                int idDecision = int.Parse(allData.GetValue(2).ToString());
+                int DCS_ID = int.Parse(allData.GetValue(1).ToString());
+                int ETP_NUM = int.Parse(allData.GetValue(2).ToString());
 
 
 
@@ -78,9 +84,9 @@ namespace gesAMM
 
 
                 ligne.Text = dateDecision.ToString();
-                ligne.SubItems.Add(numEtape.ToString());
-                ligne.SubItems.Add(idDecision.ToString());
-                
+                ligne.SubItems.Add(DCS_ID.ToString());
+                ligne.SubItems.Add(ETP_NUM.ToString());
+
 
 
                 lvWorkflow.Items.Add(ligne);
